@@ -46,28 +46,28 @@ export default class FullStackImg extends Component {
         />
         <polygon
           points="175.552 415.277 174.967 415.779 174.967 592.903 1000.285 592.903 1000.285 281.779 990.449 282.525 175.552 415.277"
-          fill={theme.text}
+          fill={theme.expTxtColor}
         />
         <rect
           x="234.5289"
           y="175.64069"
           width="230.47032"
           height="9.29316"
-          fill={theme.text}
+          fill={theme.expTxtColor}
         />
         <rect
           x="234.5289"
           y="196.08564"
           width="230.47032"
           height="9.29316"
-          fill={theme.text}
+          fill={theme.expTxtColor}
         />
         <rect
           x="234.5289"
           y="216.53058"
           width="78.06253"
           height="9.29316"
-          fill={theme.text}
+          fill={theme.expTxtColor}
         />
         <rect
           x="704.5289"
@@ -108,13 +108,18 @@ export default class FullStackImg extends Component {
           r="9.0658"
           fill={theme.compImgHighlight}
         />
-        <circle cx="587.70943" cy="576.1758" r="7.25264" fill={theme.text} />
+        <circle
+          cx="587.70943"
+          cy="576.1758"
+          r="7.25264"
+          fill={theme.expTxtColor}
+        />
         <rect
           x="310.5289"
           y="282.01368"
           width="78.06253"
           height="17.81006"
-          fill={theme.text}
+          fill={theme.expTxtColor}
         />
         <rect
           x="774.5289"
