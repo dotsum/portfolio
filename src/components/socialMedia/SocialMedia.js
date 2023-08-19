@@ -24,10 +24,11 @@ export default function socialMedia(props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IconWrapper {...media} {...props}>
-              <i className={`fab ${media.fontAwesomeIcon}`}></i>
-            </IconWrapper>
-            {/* <span></span> */}
+            <img
+              className="media-icon"
+              src={`${process.env.PUBLIC_URL}/icons/${media.icon}`}
+              alt={media.name}
+            />
           </a>
         );
       })}
