@@ -6,6 +6,7 @@ class DegreeCard extends Component {
   render() {
     const degree = this.props.degree;
     const theme = this.props.theme;
+
     return (
       <div className="degree-card">
         {degree.logo_path && (
@@ -26,7 +27,10 @@ class DegreeCard extends Component {
         <Fade right duration={2000} distance="40px">
           <div
             className="card-body"
-            style={{ width: degree.logo_path ? "90%" : "100%" }}
+            style={{
+              width: degree.logo_path ? "90%" : "100%",
+              backgroundColor: theme.cardBackground,
+            }}
           >
             <div
               className="body-header"
@@ -49,7 +53,7 @@ class DegreeCard extends Component {
             <div className="body-content">
               {degree.descriptions.map((sentence) => {
                 return (
-                  <p className="content-list" style={{ color: theme.text }}>
+                  <p className="content-list" style={{ color: theme.dark }}>
                     {sentence}
                   </p>
                 );

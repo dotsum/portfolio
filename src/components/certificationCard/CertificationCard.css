@@ -4,16 +4,14 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid #d9dbdf;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px #d9dbdf;
+  border-radius: 10px;
   margin-bottom: 30px;
   flex: 0 0 30%;
 }
 
 .cert-header {
   margin: 0px;
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .logo_img {
@@ -24,6 +22,9 @@
 
 .cert-body {
   margin: 0px;
+  border: 2px solid #ffc13b;
+  border-top-width: 4px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .cert-body-title {
@@ -35,7 +36,7 @@
 .cert-body-subtitle {
   font-family: "Google Sans Regular";
   font-size: 18px;
-  color: #808080;
+  color: #ffc13b;
   margin: 10px;
 }
 
