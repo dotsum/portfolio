@@ -17,6 +17,7 @@
     "baseui": "^13.0.0",
     "bootstrap": "^5.3.1",
     "chart.js": "^4.3.3",
+    "framer-motion": "^10.16.0",
     "fs": "0.0.1-security",
     "gh-pages": "^6.0.0",
     "graphql": "^15.0.0",
