@@ -28,11 +28,9 @@ export default class Main extends Component {
 
 
     return (
-      <div>
         <HashRouter basename="/">
           {routes}
         </HashRouter>
-      </div>
     );
   }
 }

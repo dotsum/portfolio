@@ -18,7 +18,7 @@
 }
 
 .card-img {
-  width: 200px;
+  max-width: 200px;
   height: auto;
   border-radius: 50%;
   padding: 10px;
@@ -103,7 +103,7 @@
   }
 
   .card-img {
-    width: 200px;
+    max-width: 300px;
   }
 
   .card-body {

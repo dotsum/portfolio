@@ -1,5 +1,5 @@
 .experience-main {
-  width: 100%;
+  max-width: 100%;
 }
 
 .basic-experience {
@@ -9,6 +9,8 @@
 
 .experience-heading-div {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .experience-heading-div > * {
@@ -17,11 +19,11 @@
 
 .experience-heading-img-div {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 600px;
 }
 
 .experience-heading-text-div {
+  max-width: 600px;
   text-align: center;
 }
 
@@ -53,6 +55,12 @@
   margin-left: 20px;
   margin-right: 20px;
   font-family: "Google Sans Medium";
+}
+
+.experience-content-accordion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 1380px) {

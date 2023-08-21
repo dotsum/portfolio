@@ -7,16 +7,18 @@ class Educations extends Component {
   render() {
     const theme = this.props.theme;
     return (
-      <div className="main" id="educations">
+      <div className="educations-main" id="educations">
         <div className="educations-header-div">
           <h1 className="educations-header" style={{ color: theme.text }}>
             Degrees Received
           </h1>
         </div>
         <div className="educations-body-div">
-          {degrees.degrees.map((degree, index) => {
-            return <DegreeCard key={`degree_${index}`} degree={degree} theme={theme} />;
-          })}
+          <div className="educations-cards">
+            {degrees.degrees.map((degree, index) => {
+              return <DegreeCard key={`degree_${index}`} degree={degree} theme={theme} />;
+            })}
+          </div>
         </div>
       </div>
     );

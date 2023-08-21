@@ -40,7 +40,9 @@ class Experience extends Component {
               </div>
             </div>
         </div>
+        <div className="experience-content-accordion">
         <ExperienceAccordion sections={experience["sections"]} theme={theme} />
+        </div>
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />
       </div>

@@ -1,8 +1,23 @@
+.educations-main {
+  width: 100%;
+}
+
 .educations-header {
   font-size: 40px;
   line-height: 1.1;
   font-family: "Google Sans Regular";
   text-align: center;
+}
+
+.educations-body-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.educations-cards {
+  max-width: 1380px;
 }
 
 @media (max-width: 1380px) {
