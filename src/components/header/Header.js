@@ -17,7 +17,7 @@ const onMouseOut = (event) => {
 class Header extends Component {
   render() {
     const theme = this.props.theme;
-    const link = settings.isSplash ? "/splash" : "home";
+    const link = settings.isSplash ? "/splash" : "/home";
     return (
       <div>
         <SeoHeader />
@@ -32,9 +32,9 @@ class Header extends Component {
             </NavLink>
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" htmlFor="menu-btn">
-              <span className="navicon"></span>
+              <span className="navicon" style={{ background: theme.text }}></span>
             </label>
-            <ul className="menu" style={{ backgroundColor: theme.body }}>
+            <ul className="menu" style={{ background: theme.body }}>
               <li>
                 <NavLink
                   to="/home"
