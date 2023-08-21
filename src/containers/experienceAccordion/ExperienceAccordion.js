@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard.js";
 import "./ExperienceAccordion.css";
 import { StatelessAccordion, Panel } from "baseui/accordion";
-import { Fade } from "react-reveal";
 
 class ExperienceAccordion extends Component {
   state = {
@@ -12,7 +11,6 @@ class ExperienceAccordion extends Component {
   render() {
     const theme = this.props.theme;
     return (
-      <Fade right duration={2000} distance="40px">
         <div className="experience-accord">
           <StatelessAccordion
             expanded={this.state.expanded}
@@ -65,7 +63,6 @@ class ExperienceAccordion extends Component {
             })}
           </StatelessAccordion>
         </div>
-      </Fade>
     );
   }
 }

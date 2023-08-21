@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./ExperienceCard.css";
-import { Fade } from "react-reveal";
 
 class ExperienceCard extends Component {
   render() {
@@ -13,36 +12,34 @@ class ExperienceCard extends Component {
       : "horizontal";
 
     return (
-      <Fade right duration={2000} distance="40px">
-        <div
-          className={`experience-card ${orientation}`}
-          style={{ marginTop: index === 0 ? 20 : 10 }}
-        >
-          <div className="position-description">
-            <div className={`position-box`}>
-              <div className={`position-name`}>{experience["title"]}</div>
-            </div>
-            <div className="location-duration">
-              <div className="text-wrapper">{experience["location"]}</div>
-              <div className="text-wrapper">{experience["duration"]}</div>
-            </div>
-            <img
-              className="company-logo"
-              src={require(`../../assests/images/${experience["logo_path"]}`)}
-              alt=""
-            />
-            <div className="company-name">{experience["company"]}</div>
-            <p className="company-description">{experience["description"]}</p>
+      <div
+        className={`experience-card ${orientation}`}
+        style={{ marginTop: index === 0 ? 20 : 10 }}
+      >
+        <div className="position-description">
+          <div className={`position-box`}>
+            <div className={`position-name`}>{experience["title"]}</div>
           </div>
-          <div className="responsibilities">
-            <ul>
-              {experience["responsibilities"].map((responsibility, index) => {
-                return <li className="responsibility">{responsibility}</li>;
-              })}
-            </ul>
+          <div className="location-duration">
+            <div className="text-wrapper">{experience["location"]}</div>
+            <div className="text-wrapper">{experience["duration"]}</div>
           </div>
+          <img
+            className="company-logo"
+            src={require(`../../assests/images/${experience["logo_path"]}`)}
+            alt=""
+          />
+          <div className="company-name">{experience["company"]}</div>
+          <p className="company-description">{experience["description"]}</p>
         </div>
-      </Fade>
+        <div className="responsibilities">
+          <ul>
+            {experience["responsibilities"].map((responsibility, index) => {
+              return <li className="responsibility">{responsibility}</li>;
+            })}
+          </ul>
+        </div>
+      </div>
     );
   }
 }
