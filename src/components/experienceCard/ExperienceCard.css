@@ -1,6 +1,5 @@
 .experience-card {
   align-items: center;
-  background-color: #f5f6f6;
   display: flex;
   position: relative;
   width: 100%;
@@ -19,9 +18,7 @@
 
 .experience-card .position-box {
   align-self: stretch;
-  background-color: #43454b;
   border-radius: 0px 10px 0px 0px;
-  box-shadow: -10px 0px #43454b;
   display: flex;
   flex: 0 0 auto;
   gap: 10px;
@@ -31,7 +28,6 @@
 }
 
 .experience-card .position-name {
-  color: #ffffff;
   flex: 1;
   font-family: "Google Sans Medium", Helvetica;
   font-size: 26px;
@@ -52,7 +48,6 @@
 }
 
 .experience-card .text-wrapper {
-  color: #43454b;
   font-family: "Google Sans Regular", Helvetica;
   font-size: 16px;
   position: relative;
@@ -70,7 +65,6 @@
 }
 
 .experience-card .company-name {
-  color: #43454b;
   font-family: "Google Sans Medium", Helvetica;
   font-size: 26px;
   font-weight: 400;
@@ -80,7 +74,6 @@
 
 .experience-card .company-description {
   align-self: stretch;
-  color: #43454b;
   font-family: "Google Sans Regular", Helvetica;
   font-size: 16px;
   position: relative;
@@ -90,8 +83,6 @@
 .experience-card .responsibilities {
   align-items: flex-start;
   align-self: stretch;
-  background-color: #43454b;
-  border-color: #ffc13b;
   border-style: solid;
   border-width: 2px 2px 2px 4px;
   display: flex;
@@ -101,14 +92,13 @@
   position: relative;
 }
 
-.responsibilities ul {
+.responsibilities .responsibilities ul {
   padding-left: 10px;
 }
 
-.responsibility {
+.responsibilities .responsibility {
   list-style: none;
   align-self: stretch;
-  color: #ffffff;
   font-family: "Google Sans Regular", Helvetica;
   font-size: 16px;
   margin: 0px;
@@ -116,7 +106,7 @@
   padding: 0 0 0 20px;
 }
 
-.responsibility::before {
+.responsibilities .responsibility .bullet {
   content: "";
   position: absolute;
   left: 0;
@@ -124,7 +114,6 @@
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  background-color: #ffc13b;
 }
 
 /* Settings for higher resolutions */

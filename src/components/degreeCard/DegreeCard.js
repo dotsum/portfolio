@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Button from "../../components/button/Button";
 import "./DegreeCard.css";
 
 class DegreeCard extends Component {
@@ -30,7 +31,10 @@ class DegreeCard extends Component {
         >
           <div
             className="body-header"
-            style={{ backgroundColor: theme.headerColor }}
+            style={{
+              backgroundColor: theme.headerColor,
+              borderColor: theme.text,
+            }}
           >
             <div className="body-header-title">
               <h2 className="card-title" style={{ color: theme.text }}>
@@ -54,22 +58,14 @@ class DegreeCard extends Component {
                 </p>
               );
             })}
-            {degree.website_link && (
-              <a
-                href={degree.website_link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div
-                  className="visit-btn"
-                  style={{ backgroundColor: theme.headerColor }}
-                >
-                  <p className="btn" style={{ color: theme.text }}>
-                    Visit Website
-                  </p>
-                </div>
-              </a>
-            )}
+            <Button
+              className="visit-btn"
+              text="Visit Website"
+              newTab={true}
+              href={degree.website_link}
+              theme={theme}
+              style={{ borderRadius: '15px', }}
+            />
           </div>
         </div>
       </div>

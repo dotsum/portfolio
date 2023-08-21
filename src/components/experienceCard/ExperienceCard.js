@@ -14,13 +14,27 @@ class ExperienceCard extends Component {
     return (
       <div
         className={`experience-card ${orientation}`}
-        style={{ marginTop: index === 0 ? 20 : 10 }}
+        style={{ 
+          marginTop: index === 0 ? 20 : 10,
+          backgroundColor: theme.cardBackground ? theme.cardBackground: theme.secondaryText ? theme.cardBackground ? theme.cardBackground: theme.secondaryText: theme.secondaryText,
+        }}
       >
         <div className="position-description">
-          <div className={`position-box`}>
-            <div className={`position-name`}>{experience["title"]}</div>
+          <div 
+            className={`position-box`}
+            style={{
+              backgroundColor: theme.body,
+              boxShadow: `-10px 0px ${theme.body}`
+            }}
+          >
+            <div 
+              className={`position-name`}
+              style={{ color: theme.cardBackground ? theme.cardBackground: theme.secondaryText }}
+            >
+                {experience["title"]}
+            </div>
           </div>
-          <div className="location-duration">
+          <div className="location-duration" style={{ color: theme.body }}>
             <div className="text-wrapper">{experience["location"]}</div>
             <div className="text-wrapper">{experience["duration"]}</div>
           </div>
@@ -29,13 +43,39 @@ class ExperienceCard extends Component {
             src={require(`../../assests/images/${experience["logo_path"]}`)}
             alt=""
           />
-          <div className="company-name">{experience["company"]}</div>
-          <p className="company-description">{experience["description"]}</p>
+          <div 
+            className="company-name"
+            style={{ color: theme.body }}
+          >
+            {experience["company"]}
+          </div>
+          <p 
+            className="company-description"
+            style={{ color: theme.body }}
+          >
+            {experience["description"]}
+          </p>
         </div>
-        <div className="responsibilities">
+        <div 
+          className="responsibilities"
+          style={{
+            backgroundColor: theme.body,
+            borderColor: theme.text,
+          }}
+        >
           <ul>
             {experience["responsibilities"].map((responsibility, index) => {
-              return <li key={`responsibility_${index}`} className="responsibility">{responsibility}</li>;
+              return (
+              <li 
+                  key={`responsibility_${index}`}
+                  className="responsibility"
+                  style={{ 
+                    color: theme.cardBackground ? theme.cardBackground: theme.secondaryText,
+                   }}
+              >
+                <span className="bullet" style={{ backgroundColor: theme.text }}></span>
+                <span>{responsibility}</span>
+              </li>);
             })}
           </ul>
         </div>

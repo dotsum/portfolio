@@ -29,7 +29,8 @@
   display: flex;
   border-radius: 20px 20px 0px 0px;
   padding: 10px;
-  border: 2px solid #ffc13b;
+  border-width: 2px;
+  border-style: solid;
   border-bottom-width: 4px;
 }
 
@@ -69,17 +70,8 @@
 
 .visit-btn {
   display: inline-block;
-  margin: 0px 10px 10px 0px;
-  padding: 10px;
-  border-radius: 20px;
-  border: 0px;
+  margin: 0px 0px 10px 0px;
   float: right;
-}
-
-.btn {
-  margin: 0px;
-  padding: 0px;
-  font-family: "Google Sans Regular";
 }
 
 @media (max-width: 1380px) {

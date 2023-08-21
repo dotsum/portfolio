@@ -25,13 +25,16 @@ class CertificationCard extends Component {
               />
             </div>
             <div className="content-details fadeIn-top">
-              <h3 className="content-title" style={{ color: theme.body }}>
+              <h3 className="content-title" style={{ color: theme.text }}>
                 Certificate
               </h3>
             </div>
           </a>
         </div>
-        <div className="cert-body">
+        <div 
+          className="cert-body"
+          style={{ borderColor: theme.text }}
+        >
           <h2 className="cert-body-title" style={{ color: theme.text }}>
             {certificate.title}
           </h2>
