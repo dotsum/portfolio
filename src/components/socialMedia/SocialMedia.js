@@ -15,7 +15,7 @@ const IconWrapper = styled.span`
 
 export default function socialMedia(props) {
   return (
-    <div className="social-media-div">
+    <div className="social-media-div" style={props.centred ?  {justifyContent: 'center'} : {}}>
       {socialMediaLinks.map((media, index) => {
         return (
           <a
