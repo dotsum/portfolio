@@ -51,7 +51,8 @@ class ExperienceAccordion extends Component {
                   {section["experiences"].map((experience, index) => {
                     return (
                       <ExperienceCard
-                        index={index}
+                        key={`${section["title"]}_${index}`}
+                        index={index} 
                         totalCards={section["experiences"].length}
                         experience={experience}
                         theme={theme}

@@ -15,13 +15,14 @@ export default function StartupProject() {
         <p className="subTitle project-subtitle">{bigProjects.subtitle}</p>
         <div className="startup-projects-main">
           <div className="startup-project-text">
-            {bigProjects.projects.map((project) => {
+            {bigProjects.projects.map((project, index) => {
               return (
                 <div
-                  className="saaya-health-div"
+                  key={`project_${index}`}
+                  className="health-div"
                   onClick={() => openProjectInNewWindow(project.link)}
                 >
-                  <img alt="Saad Working" src={project.image}></img>
+                  <img alt="Project Image" src={project.image}></img>
                 </div>
               );
             })}

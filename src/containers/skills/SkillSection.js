@@ -22,9 +22,9 @@ class SkillSection extends Component {
     const theme = this.props.theme;
     return (
       <div>
-        {skills.data.map((skill) => {
+        {skills.data.map((skill, index) => {
           return (
-            <div className="skills-main-div">
+            <div key={`skill_${index}`} className="skills-main-div">
                 <div className="skills-image-div">
                   <GetSkillSvg fileName={skill.fileName} theme={theme} />
                 </div>
@@ -35,9 +35,10 @@ class SkillSection extends Component {
                   </h1>
                   <SoftwareSkill logos={skill.softwareSkills} />
                   <div>
-                    {skill.skills.map((skillSentence) => {
+                    {skill.skills.map((skillSentence, index) => {
                       return (
                         <p
+                          key={index}
                           className="subTitle skills-text"
                           style={{ color: theme.secondaryText }}
                         >

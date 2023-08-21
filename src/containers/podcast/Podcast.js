@@ -12,9 +12,9 @@ export default function Podcast() {
         </p>
       </div>
       <div className="podcast-main-div">
-        {podcastSection.podcast.map((podcastLink) => {
+        {podcastSection.podcast.map((podcastLink, index) => {
           return (
-            <div>
+            <div key={`podcast_${index}`}>
               <iframe
                 title="podcast"
                 className="podcast"

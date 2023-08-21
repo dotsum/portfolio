@@ -35,7 +35,7 @@ class ExperienceCard extends Component {
         <div className="responsibilities">
           <ul>
             {experience["responsibilities"].map((responsibility, index) => {
-              return <li className="responsibility">{responsibility}</li>;
+              return <li key={`responsibility_${index}`} className="responsibility">{responsibility}</li>;
             })}
           </ul>
         </div>

@@ -14,8 +14,8 @@ class Issues extends Component {
           </h1>
         </div>
         <div className="issues-body-div">
-          {issuesData["data"].map((issue) => {
-            return <IssueCard issue={issue} />;
+          {issuesData["data"].map((issue, index) => {
+            return <IssueCard key={`issue_${index}`} issue={issue} />;
           })}
         </div>
       </div>

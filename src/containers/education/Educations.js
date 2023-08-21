@@ -14,8 +14,8 @@ class Educations extends Component {
           </h1>
         </div>
         <div className="educations-body-div">
-          {degrees.degrees.map((degree) => {
-            return <DegreeCard degree={degree} theme={theme} />;
+          {degrees.degrees.map((degree, index) => {
+            return <DegreeCard key={`degree_${index}`} degree={degree} theme={theme} />;
           })}
         </div>
       </div>
