@@ -6,15 +6,13 @@ import { chosenTheme } from "./theme";
 import { GlobalStyles } from "./global";
 import { BrowserRouter } from "react-router-dom";
 
-function App() {
-  return (
-    <ThemeProvider theme={chosenTheme}>
-        <GlobalStyles />
-        <BrowserRouter>
-        <Main theme={chosenTheme} />
-        </BrowserRouter>
-    </ThemeProvider>
-  );
-}
+const App = () => (
+  <ThemeProvider theme={chosenTheme}>
+    <GlobalStyles />
+    <BrowserRouter>
+      <Main theme={chosenTheme} />
+    </BrowserRouter>
+  </ThemeProvider>
+);
 
 export default App;
