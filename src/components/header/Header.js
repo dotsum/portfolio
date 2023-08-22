@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Header.css";
 import { NavLink, Link } from "react-router-dom";
 import { greeting, settings } from "../../portfolio.js";
@@ -14,28 +14,26 @@ const onMouseOut = (event) => {
   el.style.backgroundColor = "transparent";
 };
 
-class Header extends Component {
-  render() {
-    const theme = this.props.theme;
-    const link = settings.isSplash ? "/splash" : "/home";
-    return (
+const Header = ({ theme }) => {
+  const link = settings.isSplash ? "/splash" : "/home";
+  return (
+    <div>
+      <SeoHeader />
       <div>
-        <SeoHeader />
-        <div>
-          <header className="header">
-            <NavLink to={link} tag={Link} className="logo">
-              <span style={{ color: theme.text }}> &lt;</span>
-              <span className="logo-name" style={{ color: theme.text }}>
-                {greeting.logo_name}
-              </span>
-              <span style={{ color: theme.text }}>/&gt;</span>
-            </NavLink>
-            <input className="menu-btn" type="checkbox" id="menu-btn" />
-            <label className="menu-icon" htmlFor="menu-btn">
-              <span className="navicon" style={{ background: theme.text }}></span>
-            </label>
-            <ul className="menu" style={{ background: theme.body }}>
-              <li>
+        <header className="header">
+          <NavLink to={link} tag={Link} className="logo">
+            <span style={{ color: theme.text }}> &lt;</span>
+            <span className="logo-name" style={{ color: theme.text }}>
+              {greeting.logo_name}
+            </span>
+            <span style={{ color: theme.text }}>/&gt;</span>
+          </NavLink>
+          <input className="menu-btn" type="checkbox" id="menu-btn" />
+          <label className="menu-icon" htmlFor="menu-btn">
+            <span className="navicon" style={{ background: theme.text }}></span>
+          </label>
+          <ul className="menu" style={{ background: theme.body }}>
+          <li>
                 <NavLink
                   to="/home"
                   tag={Link}
@@ -83,11 +81,11 @@ class Header extends Component {
                   Contact Me
                 </NavLink>
               </li>
-            </ul>
-          </header>
-        </div>
+          </ul>
+        </header>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
 export default Header;

@@ -1,19 +1,13 @@
 import React from "react";
 import "./Button.css";
 
-const onMouseEnter = (event, color, bgColor) => {
+const handleMouseEvents = (event, color, bgColor) => {
   const el = event.target;
   el.style.color = color;
   el.style.backgroundColor = bgColor;
 };
 
-const onMouseOut = (event, color, bgColor) => {
-  const el = event.target;
-  el.style.color = color;
-  el.style.backgroundColor = bgColor;
-};
-
-export default function Button({ text, className, href, newTab, theme, style }) {
+const Button = ({ text, className, href, newTab, theme, style }) => {
   return (
     <div className={className}>
       <a
@@ -26,11 +20,13 @@ export default function Button({ text, className, href, newTab, theme, style }) 
           border: `solid 1px ${theme.text}`,
           ...style
         }}
-        onMouseEnter={(event) => onMouseEnter(event, theme.text, theme.body)}
-        onMouseOut={(event) => onMouseOut(event, theme.body, theme.text)}
+        onMouseEnter={(event) => handleMouseEvents(event, theme.text, theme.body)}
+        onMouseOut={(event) => handleMouseEvents(event, theme.body, theme.text)}
       >
         {text}
       </a>
     </div>
   );
-}
+};
+
+export default Button;
