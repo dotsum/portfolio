@@ -15,10 +15,11 @@ const IconWrapper = styled.span`
 
 export default function socialMedia(props) {
   return (
-    <div className="social-media-div">
-      {socialMediaLinks.map((media) => {
+    <div className="social-media-div" style={props.centred ?  {justifyContent: 'center'} : {}}>
+      {socialMediaLinks.map((media, index) => {
         return (
           <a
+            key={`media_${index}`}
             href={media.link}
             className={`icon-button`}
             target="_blank"

@@ -5,7 +5,6 @@ import GithubRepoCard from "../../components/githubRepoCard/GithubRepoCard";
 import PublicationCard from "../../components/publicationsCard/PublicationCard";
 import Button from "../../components/button/Button";
 import TopButton from "../../components/topButton/TopButton";
-import { Fade } from "react-reveal";
 import {
   greeting,
   projectsHeader,
@@ -23,7 +22,6 @@ class Projects extends Component {
       <div className="projects-main">
         <Header theme={theme} />
         <div className="basic-projects">
-          <Fade bottom duration={2000} distance="40px">
             <div className="projects-heading-div">
               <div className="projects-heading-img-div">
                 {/* <img
@@ -47,7 +45,6 @@ class Projects extends Component {
                 </p>
               </div>
             </div>
-          </Fade>
         </div>
         <div className="repo-cards-div-main">
           {ProjectsData.data.map((repo) => {
@@ -65,7 +62,6 @@ class Projects extends Component {
         {/* Publications  */}
         {publications.data.length > 0 ? (
           <div className="basic-projects">
-            <Fade bottom duration={2000} distance="40px">
               <div className="publications-heading-div">
                 <div className="publications-heading-text-div">
                   <h1
@@ -82,7 +78,6 @@ class Projects extends Component {
                   </p>
                 </div>
               </div>
-            </Fade>
           </div>
         ) : null}
 

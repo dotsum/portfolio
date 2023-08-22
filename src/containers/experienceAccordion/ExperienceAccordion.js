@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard.js";
 import "./ExperienceAccordion.css";
 import { StatelessAccordion, Panel } from "baseui/accordion";
-import { Fade } from "react-reveal";
 
 class ExperienceAccordion extends Component {
   state = {
@@ -12,7 +11,6 @@ class ExperienceAccordion extends Component {
   render() {
     const theme = this.props.theme;
     return (
-      <Fade right duration={2000} distance="40px">
         <div className="experience-accord">
           <StatelessAccordion
             expanded={this.state.expanded}
@@ -21,10 +19,11 @@ class ExperienceAccordion extends Component {
               Header: {
                 style: () => ({
                   backgroundColor: `${theme.body}`,
-                  border: `1px solid`,
                   borderRadius: `5px`,
+                  borderWidth: `1px`,
                   borderColor: `${theme.headerColor}`,
                   marginBottom: `3px`,
+                  fontSize: `30px`,
                   fontFamily: "Google Sans Regular",
                   color: `${theme.text}`,
                   ":hover": {
@@ -53,7 +52,8 @@ class ExperienceAccordion extends Component {
                   {section["experiences"].map((experience, index) => {
                     return (
                       <ExperienceCard
-                        index={index}
+                        key={`${section["title"]}_${index}`}
+                        index={index} 
                         totalCards={section["experiences"].length}
                         experience={experience}
                         theme={theme}
@@ -65,7 +65,6 @@ class ExperienceAccordion extends Component {
             })}
           </StatelessAccordion>
         </div>
-      </Fade>
     );
   }
 }

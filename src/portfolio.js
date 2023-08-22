@@ -13,7 +13,7 @@ const seo = {
   og: {
     title: "Vladyslav Sumatokhin Portfolio",
     type: "website",
-    url: "https://dotsum.github.io/portfolio/",
+    url: "https://dotsum.github.io/",
   },
 };
 

@@ -6,7 +6,6 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import BlogsImg from "./BlogsImg";
 import AddressImg from "./AddressImg";
-import { Fade } from "react-reveal";
 import "./ContactComponent.css";
 import { greeting, contactPageData } from "../../portfolio.js";
 
@@ -22,7 +21,6 @@ class Contact extends Component {
       <div className="contact-main">
         <Header theme={theme} />
         <div className="basic-contact">
-          <Fade bottom duration={1000} distance="40px">
             <div className="contact-heading-div">
               <div className="contact-heading-img-div">
                 <img
@@ -43,7 +41,7 @@ class Contact extends Component {
                 >
                   {ContactData["description"]}
                 </p>
-                <SocialMedia theme={theme} />
+                <SocialMedia theme={theme} centred={true}/>
                 <div className="resume-btn-div">
                   <Button
                     text="See My Resume"
@@ -54,8 +52,6 @@ class Contact extends Component {
                 </div>
               </div>
             </div>
-          </Fade>
-          <Fade bottom duration={1000} distance="40px">
             <div className="blog-heading-div">
               <div className="blog-heading-text-div">
                 <h1 className="blog-heading-text" style={{ color: theme.text }}>
@@ -84,8 +80,6 @@ class Contact extends Component {
                 <BlogsImg theme={theme} />
               </div>
             </div>
-          </Fade>
-          <Fade bottom duration={1000} distance="40px">
             <div className="address-heading-div">
               <div className="contact-heading-img-div">
                 {/* <img
@@ -129,7 +123,6 @@ class Contact extends Component {
                 </div>
               </div>
             </div>
-          </Fade>
         </div>
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />

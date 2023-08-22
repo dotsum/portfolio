@@ -199,7 +199,7 @@ export const yellowDarkTheme = {
   body: "#43454b",
   text: "#ffc13b",
   expTxtColor: "#000000",
-  highlight: "#43454b",
+  highlight: "#2c2e35",
   dark: "#2c2e35",
   secondaryText: "#f5f6f6",
   imageHighlight: "#fdca5c",

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./IssueCard.css";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Fade } from "react-reveal";
 
 class IssueCard extends Component {
   render() {
@@ -56,7 +55,6 @@ class IssueCard extends Component {
     }
 
     return (
-      <Fade bottom duration={2000} distance="40px">
         <div
           className="issue-card"
           style={{
@@ -132,7 +130,6 @@ class IssueCard extends Component {
             </div>
           </div>
         </div>
-      </Fade>
     );
   }
 }

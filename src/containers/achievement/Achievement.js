@@ -20,9 +20,10 @@ export default function Achievement() {
           </p>
         </div>
         <div className="achievement-cards-div">
-          {achievementSection.achivementsCards.map((card) => {
+          {achievementSection.achivementsCards.map((card, index) => {
             return (
               <AchivementCard
+                key={`achivment_${index}`}
                 cardInfo={{
                   title: card.title,
                   description: card.subtitle,
