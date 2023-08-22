@@ -3,7 +3,10 @@ import "./SocialMedia.css";
 import { socialMediaLinks } from "../../portfolio";
 
 const SocialMedia = ({ centred }) => (
-  <div className="social-media-div" style={centred ? { justifyContent: 'center' } : {}}>
+  <div
+    className="social-media-div"
+    style={centred ? { justifyContent: "center" } : {}}
+  >
     {socialMediaLinks.map((media, index) => (
       <a
         key={`media_${index}`}

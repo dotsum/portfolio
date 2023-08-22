@@ -18,10 +18,10 @@ const Button = ({ text, className, href, newTab, theme, style }) => {
           color: theme.body,
           backgroundColor: theme.text,
           border: `solid 1px ${theme.text}`,
-          ...style
+          ...style,
         }}
-        onMouseEnter={(event) => handleMouseEvents(event, theme.text, theme.body)}
-        onMouseOut={(event) => handleMouseEvents(event, theme.body, theme.text)}
+        onMouseEnter={event => handleMouseEvents(event, theme.text, theme.body)}
+        onMouseOut={event => handleMouseEvents(event, theme.body, theme.text)}
       >
         {text}
       </a>

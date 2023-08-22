@@ -7,7 +7,7 @@ class OrganizationList extends Component {
     return (
       <div className="organizations-main-div">
         <ul className="dev-icons-orgs">
-          {this.props.logos.map((logo) => {
+          {this.props.logos.map(logo => {
             return (
               <OverlayTrigger
                 key={logo["login"]}

@@ -1,5 +1,5 @@
 import React from "react";
-import { createRoot } from 'react-dom/client';
+import { createRoot } from "react-dom/client";
 import { BaseProvider, LightTheme } from "baseui";
 import { Provider as StyletronProvider } from "styletron-react";
 import { Client as Styletron } from "styletron-engine-atomic";
@@ -17,7 +17,7 @@ root.render(
     <BaseProvider theme={LightTheme}>
       <App />
     </BaseProvider>
-  </StyletronProvider>
+  </StyletronProvider>,
 );
 
 // If you want your app to work offline and load faster, you can change

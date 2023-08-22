@@ -6,7 +6,7 @@ const SoftwareSkill = ({ logos }) => (
   <div>
     <div className="software-skills-main-div">
       <ul className="dev-icons">
-        {logos.map((logo) => (
+        {logos.map(logo => (
           <OverlayTrigger
             key={logo.skillName}
             placement="top"

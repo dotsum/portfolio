@@ -1,29 +1,32 @@
 import React from "react";
 import "./ExperienceCard.css";
 
-const ExperienceCard = ({ experience, index, totalCards, theme, orientation = "horizontal" }) => {
+const ExperienceCard = ({
+  experience,
+  index,
+  totalCards,
+  theme,
+  orientation = "horizontal",
+}) => {
   const cardBackgroundColor = theme.cardBackground || theme.secondaryText;
-  
+
   return (
     <div
       className={`experience-card ${orientation}`}
-      style={{ 
+      style={{
         marginTop: index === 0 ? 20 : 10,
-        backgroundColor: cardBackgroundColor
+        backgroundColor: cardBackgroundColor,
       }}
     >
       <div className="position-description">
-        <div 
+        <div
           className="position-box"
           style={{
             backgroundColor: theme.body,
-            boxShadow: `-10px 0px ${theme.body}`
+            boxShadow: `-10px 0px ${theme.body}`,
           }}
         >
-          <div 
-            className="position-name"
-            style={{ color: cardBackgroundColor }}
-          >
+          <div className="position-name" style={{ color: cardBackgroundColor }}>
             {experience.title}
           </div>
         </div>
@@ -36,20 +39,14 @@ const ExperienceCard = ({ experience, index, totalCards, theme, orientation = "h
           src={require(`../../assests/images/${experience.logo_path}`)}
           alt=""
         />
-        <div 
-          className="company-name"
-          style={{ color: theme.body }}
-        >
+        <div className="company-name" style={{ color: theme.body }}>
           {experience.company}
         </div>
-        <p 
-          className="company-description"
-          style={{ color: theme.body }}
-        >
+        <p className="company-description" style={{ color: theme.body }}>
           {experience.description}
         </p>
       </div>
-      <div 
+      <div
         className="responsibilities"
         style={{
           backgroundColor: theme.body,
@@ -58,12 +55,15 @@ const ExperienceCard = ({ experience, index, totalCards, theme, orientation = "h
       >
         <ul>
           {experience.responsibilities.map((responsibility, index) => (
-            <li 
+            <li
               key={`responsibility_${index}`}
               className="responsibility"
               style={{ color: cardBackgroundColor }}
             >
-              <span className="bullet" style={{ backgroundColor: theme.text }}></span>
+              <span
+                className="bullet"
+                style={{ backgroundColor: theme.text }}
+              ></span>
               <span>{responsibility}</span>
             </li>
           ))}

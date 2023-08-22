@@ -22,7 +22,10 @@ const Education = ({ theme }) => (
           <h1 className="education-heading-text" style={{ color: theme.text }}>
             Education
           </h1>
-          <h3 className="education-heading-sub-text" style={{ color: theme.text }}>
+          <h3
+            className="education-heading-sub-text"
+            style={{ color: theme.text }}
+          >
             Basic Qualification and Certifcations
           </h3>
           <CompetitiveSites logos={competitiveSites.competitiveSites} />

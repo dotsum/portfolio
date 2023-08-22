@@ -31,10 +31,7 @@ const CertificationCard = ({ certificate, theme }) => (
       <h2 className="cert-body-title" style={{ color: theme.text }}>
         {certificate.title}
       </h2>
-      <h3
-        className="cert-body-subtitle"
-        style={{ color: theme.secondaryText }}
-      >
+      <h3 className="cert-body-subtitle" style={{ color: theme.secondaryText }}>
         {certificate.subtitle}
       </h3>
     </div>

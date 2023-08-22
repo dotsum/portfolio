@@ -9,7 +9,7 @@ const onMouseEnter = (event, color) => {
   el.style.backgroundColor = color;
 };
 
-const onMouseOut = (event) => {
+const onMouseOut = event => {
   const el = event.target;
   el.style.backgroundColor = "transparent";
 };
@@ -33,54 +33,54 @@ const Header = ({ theme }) => {
             <span className="navicon" style={{ background: theme.text }}></span>
           </label>
           <ul className="menu" style={{ background: theme.body }}>
-          <li>
-                <NavLink
-                  to="/home"
-                  tag={Link}
-                  activestyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/education"
-                  tag={Link}
-                  activestyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Education
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/experience"
-                  tag={Link}
-                  activestyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Experience
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/contact"
-                  tag={Link}
-                  activestyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
-                  onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
-                  onMouseOut={(event) => onMouseOut(event)}
-                >
-                  Contact Me
-                </NavLink>
-              </li>
+            <li>
+              <NavLink
+                to="/home"
+                tag={Link}
+                activestyle={{ fontWeight: "bold" }}
+                style={{ color: theme.text }}
+                onMouseEnter={event => onMouseEnter(event, theme.highlight)}
+                onMouseOut={event => onMouseOut(event)}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/education"
+                tag={Link}
+                activestyle={{ fontWeight: "bold" }}
+                style={{ color: theme.text }}
+                onMouseEnter={event => onMouseEnter(event, theme.highlight)}
+                onMouseOut={event => onMouseOut(event)}
+              >
+                Education
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/experience"
+                tag={Link}
+                activestyle={{ fontWeight: "bold" }}
+                style={{ color: theme.text }}
+                onMouseEnter={event => onMouseEnter(event, theme.highlight)}
+                onMouseOut={event => onMouseOut(event)}
+              >
+                Experience
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contact"
+                tag={Link}
+                activestyle={{ fontWeight: "bold" }}
+                style={{ color: theme.text }}
+                onMouseEnter={event => onMouseEnter(event, theme.highlight)}
+                onMouseOut={event => onMouseOut(event)}
+              >
+                Contact Me
+              </NavLink>
+            </li>
           </ul>
         </header>
       </div>

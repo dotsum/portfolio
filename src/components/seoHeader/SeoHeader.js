@@ -12,20 +12,19 @@ import {
 const SeoHeader = () => {
   const sameAs = socialMediaLinks
     .filter(
-      (media) =>
-        !media.link.startsWith("tel") && !media.link.startsWith("mailto")
+      media =>
+        !media.link.startsWith("tel") && !media.link.startsWith("mailto"),
     )
-    .map((media) => media.link);
+    .map(media => media.link);
 
   const mail = socialMediaLinks
-    .find((media) => media.link.startsWith("mailto"))
+    .find(media => media.link.startsWith("mailto"))
     .link.substring("mailto:".length);
 
-  const job = experience.sections
-    ?.find((section) => section.work)
+  const job = experience.sections?.find(section => section.work)
     ?.experiences?.[0];
 
-  const credentials = certifications.certifications.map((certification) => ({
+  const credentials = certifications.certifications.map(certification => ({
     "@context": "https://schema.org",
     "@type": "EducationalOccupationalCredential",
     url: certification.certificate_link,

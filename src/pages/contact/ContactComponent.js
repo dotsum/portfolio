@@ -26,10 +26,7 @@ const Contact = ({ theme, onToggle }) => (
           />
         </div>
         <div className="contact-heading-text-div">
-          <h1
-            className="contact-heading-text"
-            style={{ color: theme.text }}
-          >
+          <h1 className="contact-heading-text" style={{ color: theme.text }}>
             {ContactData["title"]}
           </h1>
           <p
@@ -78,10 +75,7 @@ const Contact = ({ theme, onToggle }) => (
           <AddressImg theme={theme} />
         </div>
         <div className="address-heading-text-div">
-          <h1
-            className="address-heading-text"
-            style={{ color: theme.text }}
-          >
+          <h1 className="address-heading-text" style={{ color: theme.text }}>
             {addressSection["title"]}
           </h1>
           <p
@@ -90,10 +84,7 @@ const Contact = ({ theme, onToggle }) => (
           >
             {addressSection["subtitle"]}
           </p>
-          <h1
-            className="address-heading-text"
-            style={{ color: theme.text }}
-          >
+          <h1 className="address-heading-text" style={{ color: theme.text }}>
             {phoneSection["title"]}
           </h1>
           <p

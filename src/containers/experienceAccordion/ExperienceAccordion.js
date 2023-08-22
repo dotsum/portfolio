@@ -40,8 +40,12 @@ const ExperienceAccordion = ({ theme, sections }) => {
         onChange={({ expanded }) => setExpanded(expanded)}
         overrides={accordionOverrides}
       >
-        {sections.map((section) => (
-          <Panel className="accord-panel" title={section.title} key={section.title}>
+        {sections.map(section => (
+          <Panel
+            className="accord-panel"
+            title={section.title}
+            key={section.title}
+          >
             {section.experiences.map((experience, index) => (
               <ExperienceCard
                 key={`${section.title}_${index}`}

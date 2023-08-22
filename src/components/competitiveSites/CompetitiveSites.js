@@ -5,7 +5,7 @@ import { OverlayTrigger, Tooltip } from "react-bootstrap";
 const CompetitiveSites = ({ logos }) => (
   <div className="competitive-sites-main-div">
     <ul className="dev-icons">
-      {logos.map((logo) => (
+      {logos.map(logo => (
         <OverlayTrigger
           key={logo.siteName}
           placement="top"

@@ -3,7 +3,7 @@ import ProjectLanguages from "../../components/projectLanguages/ProjectLanguages
 import "./GithubRepoCard.css";
 
 const GithubRepoCard = ({ repo, theme }) => {
-  const openRepoinNewTab = (url) => {
+  const openRepoinNewTab = url => {
     const win = window.open(url, "_blank");
     win.focus();
   };
@@ -39,10 +39,7 @@ const GithubRepoCard = ({ repo, theme }) => {
           >
             Created on {repo.createdAt.split("T")[0]}
           </p>
-          <ProjectLanguages
-            className="repo-languages"
-            logos={repo.languages}
-          />
+          <ProjectLanguages className="repo-languages" logos={repo.languages} />
         </div>
       </div>
     </div>

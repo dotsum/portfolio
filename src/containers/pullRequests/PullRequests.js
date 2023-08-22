@@ -9,12 +9,12 @@ class PullRequests extends Component {
     return (
       <div>
         <div className="pull-requests-header-div">
-            <h1 className="pull-requests-header" style={{ color: theme.text }}>
-              Pull Requests
-            </h1>
+          <h1 className="pull-requests-header" style={{ color: theme.text }}>
+            Pull Requests
+          </h1>
         </div>
         <div className="pull-request-body-div">
-          {pullRequestsData["data"].map((pullRequest) => {
+          {pullRequestsData["data"].map(pullRequest => {
             return <PullRequestCard pullRequest={pullRequest} />;
           })}
         </div>

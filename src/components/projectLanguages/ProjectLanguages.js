@@ -8,7 +8,7 @@ class ProjectLanguages extends Component {
       <div>
         <div className="software-skills-main-div">
           <ul className="dev-icons-languages">
-            {this.props.logos.map((logo) => {
+            {this.props.logos.map(logo => {
               return (
                 <OverlayTrigger
                   key={logo.name}

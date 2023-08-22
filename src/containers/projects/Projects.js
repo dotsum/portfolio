@@ -17,7 +17,7 @@ export default function Projects() {
   function getRepoData() {
     const client = new ApolloClient({
       uri: "https://api.github.com/graphql",
-      request: (operation) => {
+      request: operation => {
         operation.setContext({
           headers: {
             authorization: `Bearer ${atob(openSource.githubConvertedToken)}`,
@@ -56,7 +56,7 @@ export default function Projects() {
           }
         `,
       })
-      .then((result) => {
+      .then(result => {
         setrepoFunction(result.data.repositoryOwner.pinnedRepositories.edges);
         console.log(result);
       });

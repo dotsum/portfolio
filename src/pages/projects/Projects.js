@@ -37,7 +37,7 @@ const Projects = ({ theme, onToggle }) => (
       </div>
     </div>
     <div className="repo-cards-div-main">
-      {ProjectsData.data.map((repo) => (
+      {ProjectsData.data.map(repo => (
         <GithubRepoCard key={repo.id} repo={repo} theme={theme} />
       ))}
     </div>
@@ -52,7 +52,10 @@ const Projects = ({ theme, onToggle }) => (
       <div className="basic-projects">
         <div className="publications-heading-div">
           <div className="publications-heading-text-div">
-            <h1 className="publications-heading-text" style={{ color: theme.text }}>
+            <h1
+              className="publications-heading-text"
+              style={{ color: theme.text }}
+            >
               {publicationsHeader.title}
             </h1>
             <p
@@ -66,7 +69,7 @@ const Projects = ({ theme, onToggle }) => (
       </div>
     )}
     <div className="repo-cards-div-main">
-      {publications.data.map((pub) => (
+      {publications.data.map(pub => (
         <PublicationCard key={pub.id} pub={pub} theme={theme} />
       ))}
     </div>
