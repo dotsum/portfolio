@@ -9,18 +9,82 @@ import Projects from "../pages/projects/Projects";
 import Error404 from "../pages/errors/error404/Error";
 import { AnimatePresence } from "framer-motion";
 import { useLocation, useRoutes } from "react-router-dom";
+import PageTransition from "./animation/pageTransition/PageTransition";
 
 const Main = ({ theme }) => {
   const routes = useRoutes([
-    { path: "/", element: <Home theme={theme} /> },
-    { path: "/home", element: <Home theme={theme} /> },
-    { path: "/splash", element: <Splash theme={theme} /> },
-    { path: "/experience", element: <Experience theme={theme} /> },
-    { path: "/education", element: <Education theme={theme} /> },
-    { path: "/opensource", element: <Opensource theme={theme} /> },
-    { path: "/contact", element: <Contact theme={theme} /> },
-    { path: "/projects", element: <Projects theme={theme} /> },
-    { path: "*", element: <Error404 theme={theme} /> },
+    {
+      path: "/",
+      element: (
+        <PageTransition>
+          <Home theme={theme} />
+        </PageTransition>
+      ),
+    },
+    {
+      path: "/home",
+      element: (
+        <PageTransition>
+          <Home theme={theme} />
+        </PageTransition>
+      ),
+    },
+    {
+      path: "/splash",
+      element: (
+        <PageTransition>
+          <Splash theme={theme} />
+        </PageTransition>
+      ),
+    },
+    {
+      path: "/experience",
+      element: (
+        <PageTransition>
+          <Experience theme={theme} />
+        </PageTransition>
+      ),
+    },
+    {
+      path: "/education",
+      element: (
+        <PageTransition>
+          <Education theme={theme} />
+        </PageTransition>
+      ),
+    },
+    {
+      path: "/opensource",
+      element: (
+        <PageTransition>
+          <Opensource theme={theme} />
+        </PageTransition>
+      ),
+    },
+    {
+      path: "/contact",
+      element: (
+        <PageTransition>
+          <Contact theme={theme} />
+        </PageTransition>
+      ),
+    },
+    {
+      path: "/projects",
+      element: (
+        <PageTransition>
+          <Projects theme={theme} />
+        </PageTransition>
+      ),
+    },
+    {
+      path: "*",
+      element: (
+        <PageTransition>
+          <Error404 theme={theme} />
+        </PageTransition>
+      ),
+    },
   ]);
 
   const location = useLocation();
