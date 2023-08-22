@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import GithubRepoCard from "../../components/githubRepoCard/GithubRepoCard";
 import PublicationCard from "../../components/publicationsCard/PublicationCard";
@@ -17,7 +16,6 @@ import ProjectsImg from "./ProjectsImg";
 
 const Projects = ({ theme, onToggle }) => (
   <div className="projects-main">
-    <Header theme={theme} />
     <div className="basic-projects">
       <div className="projects-heading-div">
         <div className="projects-heading-img-div">

@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
@@ -16,7 +15,6 @@ const phoneSection = contactPageData.phoneSection;
 
 const Contact = ({ theme, onToggle }) => (
   <div className="contact-main">
-    <Header theme={theme} />
     <div className="basic-contact">
       <div className="contact-heading-div">
         <div className="contact-heading-img-div">

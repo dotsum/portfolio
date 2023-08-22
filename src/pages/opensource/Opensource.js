@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import OpensourceCharts from "../../containers/opensourceCharts/OpensourceCharts";
 import Organizations from "../../containers/organizations/Organizations";
@@ -10,7 +9,6 @@ import "./Opensource.css";
 
 const Opensource = ({ theme, onToggle }) => (
   <div className="opensource-main">
-    <Header theme={theme} />
     <Organizations theme={theme} />
     <OpensourceCharts theme={theme} />
     <PullRequests theme={theme} />

@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import ExperienceAccordion from "../../containers/experienceAccordion/ExperienceAccordion.js";
@@ -9,7 +8,6 @@ import ExperienceImg from "./ExperienceImg";
 
 const Experience = ({ theme, onToggle }) => (
   <div className="experience-main">
-    <Header theme={theme} />
     <div className="basic-experience">
       <div className="experience-heading-div">
         <div className="experience-heading-img-div">
