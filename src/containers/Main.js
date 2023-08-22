@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Route, Routes, HashRouter } from "react-router-dom";
+import React from "react";
 import Home from "../pages/home/HomeComponent";
 import Splash from "../pages/splash/Splash";
 import Education from "../pages/education/EducationComponent";
@@ -9,28 +8,57 @@ import Contact from "../pages/contact/ContactComponent";
 import Projects from "../pages/projects/Projects";
 import { settings } from "../portfolio.js";
 import Error404 from "../pages/errors/error404/Error";
+import { AnimatePresence } from "framer-motion";
+import { useLocation, useRoutes } from "react-router-dom";
 
-export default class Main extends Component {
-  render() {
-    const routes = (
-      <Routes>
-        {settings.isSplash ? <Route path="/splash" element={<Splash theme={this.props.theme} />} /> : undefined}
-        <Route path="/" element={<Home theme={this.props.theme} />} />
-        <Route path="/home" element={<Home theme={this.props.theme} />} />
-        <Route path="/experience" element={<Experience theme={this.props.theme} />} />
-        <Route path="/education" element={<Education theme={this.props.theme} />} />
-        <Route path="/opensource" element={<Opensource theme={this.props.theme} />} />
-        <Route path="/contact" element={<Contact theme={this.props.theme} />} />
-        <Route path="/projects" element={<Projects theme={this.props.theme} />} />
-        <Route path="*" element={<Error404 theme={this.props.theme} />} />
-      </Routes>
-    );
+export default function Main(props) {
+  const element = useRoutes([
+    {
+      path: "/",
+      element: <Home theme={props.theme} />
+    },
+    {
+      path: "/home",
+      element: <Home theme={props.theme} />
+    },
+    {
+      path: "/splash",
+      element: <Splash theme={props.theme} />
+    },
+    {
+      path: "/experience",
+      element: <Experience theme={props.theme} />
+    },
+    {
+      path: "/education",
+      element: <Education theme={props.theme} />
+    },
+    {
+      path: "/opensource",
+      element: <Opensource theme={props.theme} />
+    },
+    {
+      path: "/contact",
+      element: <Contact theme={props.theme} />
+    },
+    {
+      path: "/projects",
+      element: <Projects theme={props.theme} />
+    },
+    {
+      path: "*",
+      element: <Error404 theme={props.theme} />
+    },
+  ]);
 
+  const location = useLocation();
 
-    return (
-        <HashRouter basename="/">
-          {routes}
-        </HashRouter>
-    );
-  }
+  if (!element) return null;
+
+  return (
+    <AnimatePresence mode="wait" initial={false}>
+      {React.cloneElement(element, { key: location.pathname })}
+    </AnimatePresence>
+  );
 }
+
