@@ -11,14 +11,14 @@
   margin-top: 2rem;
 }
 
-.gretting-main {
+.greeting-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
   width: 90%;
   padding: 20px 10px;
   margin: 0px auto;
-}
-
-.greeting-main {
-  display: flex;
 }
 
 .greeting-main > * {
@@ -48,6 +48,12 @@
   line-height: 40px;
   margin-right: 40px;
   font-family: "Google Sans Medium";
+}
+
+.greeting-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .greeting-image-div > * {
@@ -90,6 +96,7 @@
   .portfolio-repo-btn-div {
     width: 100%;
     display: flex;
+    gap: 20px;
     justify-content: center;
   }
 }
