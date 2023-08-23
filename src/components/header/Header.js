@@ -69,7 +69,7 @@ const Header = ({ theme }) => {
                 Experience
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink
                 to="/contact"
                 tag={Link}
@@ -80,7 +80,7 @@ const Header = ({ theme }) => {
               >
                 Contact Me
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </header>
       </div>
