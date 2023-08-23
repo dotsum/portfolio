@@ -1,20 +1,17 @@
 import React from "react";
 import "./SoftwareSkill.css";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import { StatefulTooltip } from "baseui/tooltip";
 
 const SoftwareSkill = ({ logos }) => (
   <div>
     <div className="software-skills-main-div">
       <ul className="dev-icons">
         {logos.map(logo => (
-          <OverlayTrigger
+          <StatefulTooltip
             key={logo.skillName}
-            placement="top"
-            overlay={
-              <Tooltip id="tooltip-top">
-                <strong>{logo.skillName}</strong>
-              </Tooltip>
-            }
+            content={() => <p>{logo.skillName}</p>}
+            returnFocus
+            autoFocus
           >
             <li className="software-skill-inline" name={logo.skillName}>
               {logo.fontAwesomeClassname ? (
@@ -35,7 +32,7 @@ const SoftwareSkill = ({ logos }) => (
                 )
               )}
             </li>
-          </OverlayTrigger>
+          </StatefulTooltip>
         ))}
       </ul>
     </div>

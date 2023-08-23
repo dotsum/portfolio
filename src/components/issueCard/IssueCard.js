@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./IssueCard.css";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import { StatefulTooltip } from "baseui/tooltip";
 
 class IssueCard extends Component {
   render() {
@@ -27,15 +27,11 @@ class IssueCard extends Component {
     if (issue["assignees"]["nodes"].length > 0) {
       const name = issue["assignees"]["nodes"][0]["name"];
       assignee = (
-        <OverlayTrigger
+        <StatefulTooltip
           key={name}
-          placement={"top"}
-          style={{ marginBottom: "5px" }}
-          overlay={
-            <Tooltip id={`tooltip-top`}>
-              <strong>{`Assigned to ${name}`}</strong>
-            </Tooltip>
-          }
+          content={() => <p>{`Assigned to ${name}`}</p>}
+          returnFocus
+          autoFocus
         >
           <a
             href={issue["assignees"]["nodes"][0]["url"]}
@@ -48,7 +44,7 @@ class IssueCard extends Component {
               alt=""
             />
           </a>
-        </OverlayTrigger>
+        </StatefulTooltip>
       );
     } else {
       assignee = <noscript></noscript>;

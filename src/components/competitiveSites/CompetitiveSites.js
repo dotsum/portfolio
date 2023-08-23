@@ -1,20 +1,16 @@
 import React from "react";
 import "./CompetitiveSites.css";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import { StatefulTooltip } from "baseui/tooltip";
 
 const CompetitiveSites = ({ logos }) => (
   <div className="competitive-sites-main-div">
     <ul className="dev-icons">
       {logos.map(logo => (
-        <OverlayTrigger
+        <StatefulTooltip
           key={logo.siteName}
-          placement="top"
-          style={{ marginBottom: "5px" }}
-          overlay={
-            <Tooltip id="tooltip-top">
-              <strong>{logo.siteName}</strong>
-            </Tooltip>
-          }
+          content={() => <p>{logo.siteName}</p>}
+          returnFocus
+          autoFocus
         >
           <li className="competitive-sites-inline" name={logo.siteName}>
             <a
@@ -30,7 +26,7 @@ const CompetitiveSites = ({ logos }) => (
               ></span>
             </a>
           </li>
-        </OverlayTrigger>
+        </StatefulTooltip>
       ))}
     </ul>
   </div>

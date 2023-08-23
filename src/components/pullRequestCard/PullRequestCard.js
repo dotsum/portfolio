@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./PullRequestCard.css";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import { StatefulTooltip } from "baseui/tooltip";
 
 class PullRequestCard extends Component {
   render() {
@@ -36,15 +36,11 @@ class PullRequestCard extends Component {
     if (pullRequest["mergedBy"] !== null) {
       const name = pullRequest["mergedBy"]["login"];
       mergedBy = (
-        <OverlayTrigger
+        <StatefulTooltip
           key={name}
-          placement={"top"}
-          style={{ marginBottom: "5px" }}
-          overlay={
-            <Tooltip id={`tooltip-top`}>
-              <strong>{`Merged by ${name}`}</strong>
-            </Tooltip>
-          }
+          content={() => <p>{`Merged by ${name}`}</p>}
+          returnFocus
+          autoFocus
         >
           <a
             href={pullRequest["mergedBy"]["url"]}
@@ -57,7 +53,7 @@ class PullRequestCard extends Component {
               alt=""
             />
           </a>
-        </OverlayTrigger>
+        </StatefulTooltip>
       );
     } else {
       mergedBy = <noscript></noscript>;
