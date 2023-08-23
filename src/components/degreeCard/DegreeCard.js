@@ -53,11 +53,17 @@ const DegreeCard = ({ degree, theme }) => {
           </div>
         </div>
         <div className="body-content">
-          {descriptions.map((sentence, id) => (
-            <p key={id} className="content-list" style={{ color: theme.dark }}>
-              {sentence}
-            </p>
-          ))}
+          <ul>
+            {descriptions.map((sentence, index) => (
+              <li key={index} className="content-list">
+                <span
+                  className="bullet"
+                  style={{ backgroundColor: theme.text }}
+                />
+                <span style={{ color: theme.dark }}>{sentence}</span>
+              </li>
+            ))}
+          </ul>
           <Button
             className="visit-btn"
             text="Visit Website"

@@ -67,10 +67,29 @@
   align-items: center;
 }
 
+.body-content ul {
+  padding-left: 10px;
+}
+
 .content-list {
+  list-style: none;
+  align-self: stretch;
+  margin: 0px;
+  position: relative;
+  padding: 0 0 0 20px;
   padding-left: 10px;
   padding-right: 10px;
-  font-family: "Google Sans Regular";
+  font-family: "Google Sans Regular", Helvetica;
+}
+
+.content-list .bullet {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
 }
 
 .card-body {
