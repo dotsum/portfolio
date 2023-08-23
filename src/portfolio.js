@@ -24,7 +24,7 @@ const greeting = {
   nickname: "dotsum",
   subTitle:
     "A results-driven Data Engineer with expertise in predictive modeling, ETL processes, and database management. Committed to continuous learning and adapting to the latest industry advancements.",
-  resumeLink: "#",
+  resumeLink: `${process.env.PUBLIC_URL}/documents/resume.pdf`,
   portfolio_repository: "https://github.com/dotsum/portfolio",
   githubProfile: "https://github.com/dotsum",
 };
@@ -54,7 +54,7 @@ const skills = {
   data: [
     {
       title: "Data Engineering",
-      fileName: "DataScienceImg",
+      fileName: "DataEngineerImg",
       skills: [
         "🚀 Diving deep into ETL designs for analytical data warehouses.",
         "🔧 Played around with data loader optimizations for various data types.",
@@ -117,7 +117,7 @@ const skills = {
     },
     {
       title: "Data Science and AI",
-      fileName: "FullStackImg",
+      fileName: "DataScienceImg",
       skills: [
         "🧠 Crafted nifty predictive models tailored for the healthcare scene.",
         "📊 Mixed and matched ML tools to get the best out of data.",
@@ -169,7 +169,7 @@ const skills = {
     },
     {
       title: "Web Development (Still Learning!)",
-      fileName: "CloudInfraImg",
+      fileName: "FullStackImg",
       skills: [
         "🖥️ Exploring the world of responsive web designs with fresh front-end libraries.",
         "🔗 Dipping my toes into backend magic with the latest frameworks.",
@@ -242,11 +242,15 @@ const degrees = {
   degrees: [
     {
       title: "Bauman Moscow State Technical University",
-      subtitle: "Mater in Organization and Management of High-Tech Industries",
+      subtitle: "Master in Organization and Management of High-Tech Industries",
       logo_path: "bmstu_logo.svg",
       alt_name: "BMSTU",
       duration: "2020 - 2022",
-      descriptions: ["Description will be here..."],
+      descriptions: [
+        "Honed my skills in project management and production organization.",
+        "Dived deeper into the application of ML in industry settings.",
+        "Wrote thesis centered on best practices for implementing predictive maintenance of machinery.",
+      ],
       website_link: "https://bmstu.ru/",
     },
     {
@@ -255,7 +259,13 @@ const degrees = {
       logo_path: "mpu_logo.png",
       alt_name: "MPU",
       duration: "2016 - 2020",
-      descriptions: ["Description will be here..."],
+      descriptions: [
+        "Acquired strong skills in CAD and CAE systems.",
+        "Developed projects centered on parametric modeling of gearboxes based on specific physical characteristics. ",
+        "Took the lead in student initiatives aimed at developing mobile transportation devices and automating the Ilizarov apparatus. ",
+        "Participated in hackathons and competitions focused on additive manufacturing techniques",
+        "Developed a passion for 3D printing.",
+      ],
       website_link: "https://mospolytech.ru/en/",
     },
   ],
@@ -329,21 +339,19 @@ const experience = {
       work: false,
       experiences: [
         {
-          title: "ML/Data Engineer",
+          title: "Data Scientist Intern",
           company: "SAS",
-          company_url: "https://rtk-element.ru/",
-          logo_path: "rostelecom_logo.svg",
-          duration: "June 2022 - May 2023",
+          company_url: "https://www.sas.com/",
+          logo_path: "sas_logo.svg",
+          duration: "January 2021 - May 2021",
           location: "Russia, Moscow",
-          description:
-            "The company is absorbed by Rostelecom, Russia's largest provider of digital services and services",
+          description: "American multinational developer of analytics software",
           responsibilities: [
-            "Designed and optimized loaders for raw data from XML files, achieving a more than 2x increase in loading speed.",
-            "Developed ETL processes for ML models, creating processes for over 20 data marts from scratch.",
-            "Engineered predictive models to assess the risk of death and disease progression using EHR data, contributing to more effective and proactive patient care.",
-            "Enhanced model accuracy by reducing Type II error rate to below 20%, while ensuring interpretability for healthcare professionals.",
-            "Collaborated in the migration from PostgreSQL to GreenPlum, optimized procedures and data structures for GreenPlum.",
-            "Administered ML infrastructure: JupyterHub, MLFlow, S3, GreenPlum for a team of four.",
+            "Developed basic skills in data science.",
+            "Prepared datasets for analysis through cleaning and transformation.",
+            "Implemented and refined machine learning algorithms.",
+            "Communicated findings using various visualization tools",
+            "Became proficient with SAS's software for data analysis and ML, like SAS Enterprise Miner, SAS Visual Analytics and SAS Viya",
           ],
         },
       ],

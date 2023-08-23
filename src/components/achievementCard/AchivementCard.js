@@ -17,7 +17,14 @@ export default function AchivementCard({ cardInfo }) {
       </div>
       <div className="certificate-card-footer">
         {cardInfo.footer.map((v, index) => {
-          return <p key={`certificate_${index}`} onClick={() => openUrlInNewTab(v.url)}>{v.name}</p>;
+          return (
+            <p
+              key={`certificate_${index}`}
+              onClick={() => openUrlInNewTab(v.url)}
+            >
+              {v.name}
+            </p>
+          );
         })}
       </div>
     </div>

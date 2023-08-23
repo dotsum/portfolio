@@ -1,23 +1,19 @@
 import React, { Component } from "react";
 import "./OrganizationList.css";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import { StatefulTooltip } from "baseui/tooltip";
 
 class OrganizationList extends Component {
   render() {
     return (
       <div className="organizations-main-div">
         <ul className="dev-icons-orgs">
-          {this.props.logos.map((logo) => {
+          {this.props.logos.map(logo => {
             return (
-              <OverlayTrigger
+              <StatefulTooltip
                 key={logo["login"]}
-                placement={"top"}
-                style={{ marginBottom: "5px" }}
-                overlay={
-                  <Tooltip id={`tooltip-top`}>
-                    <strong>{logo["login"]}</strong>
-                  </Tooltip>
-                }
+                content={() => <p>{logo["login"]}</p>}
+                returnFocus
+                autoFocus
               >
                 <li className="organizations-inline" name={logo["login"]}>
                   <img
@@ -26,7 +22,7 @@ class OrganizationList extends Component {
                     alt={logo["login"]}
                   />
                 </li>
-              </OverlayTrigger>
+              </StatefulTooltip>
             );
           })}
         </ul>
