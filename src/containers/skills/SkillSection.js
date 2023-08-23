@@ -5,13 +5,13 @@ import { skills } from "../../portfolio";
 import DataScienceImg from "./DataScienceImg";
 import FullStackImg from "./FullStackImg";
 import CloudInfraImg from "./CloudInfraImg";
-import DesignImg from "./DesignImg";
+import DataEngineerImg from "./DataEngineerImg";
 
 const GetSkillSvg = ({ fileName, theme }) => {
   if (fileName === "DataScienceImg") return <DataScienceImg theme={theme} />;
   if (fileName === "FullStackImg") return <FullStackImg theme={theme} />;
   if (fileName === "CloudInfraImg") return <CloudInfraImg theme={theme} />;
-  return <DesignImg theme={theme} />;
+  if (fileName === "DataEngineerImg") return <DataEngineerImg theme={theme} />;
 };
 
 const SkillSection = ({ theme }) => (
