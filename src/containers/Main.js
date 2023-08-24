@@ -7,7 +7,6 @@ import Experience from "../pages/experience/Experience";
 // import Contact from "../pages/contact/ContactComponent";
 // import Projects from "../pages/projects/Projects";
 import Error404 from "../pages/errors/error404/Error";
-import { AnimatePresence } from "framer-motion";
 import { useLocation, useRoutes } from "react-router-dom";
 import PageTransition from "./animation/pageTransition/PageTransition";
 
@@ -91,11 +90,7 @@ const Main = ({ theme }) => {
 
   if (!routes) return null;
 
-  return (
-    <AnimatePresence mode="wait" initial={false}>
-      {React.cloneElement(routes, { key: location.pathname })}
-    </AnimatePresence>
-  );
+  return React.cloneElement(routes, { key: location.pathname });
 };
 
 export default Main;
