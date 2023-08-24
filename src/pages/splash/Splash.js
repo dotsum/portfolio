@@ -3,17 +3,15 @@ import "./Splash.css";
 import { useNavigate } from "react-router-dom";
 import LoaderLogo from "../../components/Loader/LoaderLogo.js";
 
-function AnimatedSplash(props) {
-  return (
-    <div className="logo_wrapper">
-      <div className="screen" style={{ backgroundColor: props.theme.splashBg }}>
-        <LoaderLogo id="logo" theme={props.theme} />
-      </div>
+const AnimatedSplash = ({ theme }) => (
+  <div className="logo_wrapper">
+    <div className="screen" style={{ backgroundColor: theme.splashBg }}>
+      <LoaderLogo id="logo" theme={theme} />
     </div>
-  );
-}
+  </div>
+);
 
-function Splash(props) {
+const Splash = ({ theme }) => {
   const [redirect, setRedirect] = useState(false);
   const navigate = useNavigate();
 
@@ -33,7 +31,7 @@ function Splash(props) {
     }
   }, [redirect, navigate]);
 
-  return redirect ? null : <AnimatedSplash theme={props.theme} />;
-}
+  return redirect ? null : <AnimatedSplash theme={theme} />;
+};
 
 export default Splash;

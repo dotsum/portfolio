@@ -92,7 +92,7 @@
   position: relative;
 }
 
-.responsibilities .responsibilities ul {
+.responsibilities ul {
   padding-left: 10px;
 }
 
@@ -100,8 +100,8 @@
   list-style: none;
   align-self: stretch;
   font-family: "Google Sans Regular", Helvetica;
-  font-size: 16px;
-  margin: 0px;
+  font-size: 18px;
+  margin: 10px 0px;
   position: relative;
   padding: 0 0 0 20px;
 }
@@ -156,5 +156,14 @@
     border-width: 4px 2px 2px 2px;
     flex: 0 0 auto;
     width: 100%;
+  }
+
+  .responsibilities .responsibilities ul {
+    padding-left: 0px;
+  }
+
+  .responsibilities .responsibility {
+    font-size: 16px;
+    margin: 5px 0px;
   }
 }

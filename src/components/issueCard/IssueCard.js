@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./IssueCard.css";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import { StatefulTooltip } from "baseui/tooltip";
 
 class IssueCard extends Component {
   render() {
@@ -27,15 +27,11 @@ class IssueCard extends Component {
     if (issue["assignees"]["nodes"].length > 0) {
       const name = issue["assignees"]["nodes"][0]["name"];
       assignee = (
-        <OverlayTrigger
+        <StatefulTooltip
           key={name}
-          placement={"top"}
-          style={{ marginBottom: "5px" }}
-          overlay={
-            <Tooltip id={`tooltip-top`}>
-              <strong>{`Assigned to ${name}`}</strong>
-            </Tooltip>
-          }
+          content={() => <p>{`Assigned to ${name}`}</p>}
+          returnFocus
+          autoFocus
         >
           <a
             href={issue["assignees"]["nodes"][0]["url"]}
@@ -48,42 +44,42 @@ class IssueCard extends Component {
               alt=""
             />
           </a>
-        </OverlayTrigger>
+        </StatefulTooltip>
       );
     } else {
       assignee = <noscript></noscript>;
     }
 
     return (
-        <div
-          className="issue-card"
-          style={{
-            backgroundColor: bgColor,
-            border: `1px solid ${iconPR.style.color}`,
-          }}
-        >
-          <div className="issue-top">
-            <div className="issue-header">
-              <span
-                className="iconify issue-icons"
-                data-icon={iconPR.iconifyClass}
-                style={iconPR.style}
-                data-inline="false"
-              ></span>
-              <div className="issue-title-header">
-                <p className="issue-title">
-                  <a
-                    href={issue["url"]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {issue["title"]}
-                  </a>
-                </p>
-                <p className="issue-subtitle">{subtitleString}</p>
-              </div>
+      <div
+        className="issue-card"
+        style={{
+          backgroundColor: bgColor,
+          border: `1px solid ${iconPR.style.color}`,
+        }}
+      >
+        <div className="issue-top">
+          <div className="issue-header">
+            <span
+              className="iconify issue-icons"
+              data-icon={iconPR.iconifyClass}
+              style={iconPR.style}
+              data-inline="false"
+            ></span>
+            <div className="issue-title-header">
+              <p className="issue-title">
+                <a
+                  href={issue["url"]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {issue["title"]}
+                </a>
+              </p>
+              <p className="issue-subtitle">{subtitleString}</p>
             </div>
-            {/* <div className="files-changed-header">
+          </div>
+          {/* <div className="files-changed-header">
 							<p
 								className="files-changed-text"
 								style={{ backgroundColor: iconPR.style.color }}
@@ -92,44 +88,44 @@ class IssueCard extends Component {
 							</p>
 							<p className="files-changed-text-2">Files Changed</p>
 						</div> */}
-          </div>
-          <div className="issue-down">
-            <div className="assignee-repo">
-              <p className="parent-repo">
-                Repository:{" "}
-                <a
-                  style={{ color: iconPR.style.color }}
-                  href={issue["repository"]["url"]}
-                >
-                  {issue["repository"]["owner"]["login"]}/
-                  {issue["repository"]["name"]}
-                </a>
-              </p>
-              <div className="assignee-info">
-                {/* <p className="additions-files">
+        </div>
+        <div className="issue-down">
+          <div className="assignee-repo">
+            <p className="parent-repo">
+              Repository:{" "}
+              <a
+                style={{ color: iconPR.style.color }}
+                href={issue["repository"]["url"]}
+              >
+                {issue["repository"]["owner"]["login"]}/
+                {issue["repository"]["name"]}
+              </a>
+            </p>
+            <div className="assignee-info">
+              {/* <p className="additions-files">
 									<strong>{pullRequest["additions"]} + </strong>
 								</p>
 								<p className="deletions-files">
 									<strong>{pullRequest["deletions"]} - </strong>
 								</p> */}
-                {assignee}
-              </div>
-            </div>
-            <div className="owner-img-div">
-              <a
-                href={issue["repository"]["owner"]["url"]}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="owner-img"
-                  src={issue["repository"]["owner"]["avatarUrl"]}
-                  alt=""
-                />
-              </a>
+              {assignee}
             </div>
           </div>
+          <div className="owner-img-div">
+            <a
+              href={issue["repository"]["owner"]["url"]}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="owner-img"
+                src={issue["repository"]["owner"]["avatarUrl"]}
+                alt=""
+              />
+            </a>
+          </div>
         </div>
+      </div>
     );
   }
 }

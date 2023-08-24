@@ -1,15 +1,17 @@
 {
   "private": true,
   "name": "dotsum-portfolio",
-  "homepage": "https://dotsum.github.io/",
-  "version": "0.1.0",
+  "homepage": "https://dotsum.github.io",
+  "version": "0.2.1",
   "scripts": {
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
     "start": "react-scripts start",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
@@ -24,7 +26,6 @@
     "node-fetch": "^3.3.2",
     "prettier-package-json": "^2.8.0",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.8.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
